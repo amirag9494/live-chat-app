@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with Username</title>
+    <!-- Direct link to style.css in the same directory -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h2>FastAPI Chat App</h2>
+        
+        <!-- Username input section -->
+        <div id="login-section" class="form-group">
+            <input type="text" id="usernameText" placeholder="Enter your name..."/>
+            <button onclick="joinChat()">Join Chat</button>
+        </div>
+
+        <!-- Chat interface section (hidden initially) -->
+        <div id="chat-section" style="display:none;">
+            <p>Logged in as: <strong id="my-username"></strong></p>
+            <form action="" onsubmit="sendMessage(event)">
+                <input type="text" id="messageText" autocomplete="off" placeholder="Type your message..." style="width: 70%;"/>
+                <button>Send</button>
+            </form>
+            <ul id='messages'></ul>
+        </div>
+    </div>
+
+    <!-- Direct link to script.js in the same directory -->
+    <script src="/script.js"></script>
+</body>
+</html>
